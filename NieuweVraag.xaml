@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProjectChallenge.NieuweVraag"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MaakVraag" Height="507" Width="622">
+    <Grid>
+        <ComboBox x:Name="vakComboBox" HorizontalAlignment="Left" Height="23" Margin="48,49,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="3" SelectedValuePath="Content" SelectionChanged="vakComboBox_SelectionChanged">
+            <ComboBoxItem Content="Wiskunde" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="Taal" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="Kennis" HorizontalAlignment="Left" Width="110"/>
+        </ComboBox>
+        <Label x:Name="vakLabel" Content="Vak:" HorizontalAlignment="Left" Margin="16,46,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="vraagTextBox" HorizontalAlignment="Left" Height="23" Margin="60,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="467"/>
+        <Label x:Name="vraagLabel1" Content="Vraag:" HorizontalAlignment="Left" Margin="16,77,0,0" VerticalAlignment="Top"/>
+        <Grid x:Name="labelGrid" HorizontalAlignment="Left" Height="250" Margin="9,184,0,0" VerticalAlignment="Top" Width="64"/>
+        <Grid x:Name="optiesGrid" HorizontalAlignment="Left" Height="250" Margin="78,184,0,0" VerticalAlignment="Top" Width="526"/>
+        <Label x:Name="soortLabel" Content="(Invulvraag)" HorizontalAlignment="Left" Margin="215,120,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="afbeeldingButton" Content="__" HorizontalAlignment="Left" Margin="305,443,0,0" VerticalAlignment="Top" Width="23" Click="afbeeldingButton_Click"/>
+        <TextBox x:Name="afbeeldingTextBox" HorizontalAlignment="Left" Height="23" Margin="78,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Text="C:\"/>
+        <Label x:Name="afbeeldingLabel" Content="afbeelding:" HorizontalAlignment="Left" Margin="8,440,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="aantalOptiesComboBox" HorizontalAlignment="Left" Height="23" Margin="98,120,0,0" VerticalAlignment="Top" Width="112" SelectedIndex="0" SelectedValuePath="Content" SelectionChanged="aantalOptiesComboBox_SelectionChanged">
+            <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="2" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="4" HorizontalAlignment="Left" Width="110"/>
+            <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="110"/>
+        </ComboBox>
+        <Label x:Name="optiesLabel" Content="Aantal opties:" HorizontalAlignment="Left" Margin="16,118,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="voegToeButton" Content="Voeg Toe" HorizontalAlignment="Left" Margin="529,443,0,0" VerticalAlignment="Top" Width="75" Click="voegToeButton_Click"/>
+        <RadioButton x:Name="makkelijkRadioButton" Content="makkelijk" HorizontalAlignment="Left" Margin="206,23,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="moeilijkRadioButton" Content="moeilijk" HorizontalAlignment="Left" Margin="280,23,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="meetkundeRadioButton" Content="meetkunde" HorizontalAlignment="Left" Margin="206,23,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="metendRekenenRadioButton" Content="metendrekenen" HorizontalAlignment="Left" Margin="320,23,0,0" VerticalAlignment="Top" Visibility="Hidden" Checked="RadioButton_Checked"/>
+        <Label x:Name="antwoordLabel" Content="Juist antwoord:" HorizontalAlignment="Left" Margin="16,148,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="antwoordTextBox" HorizontalAlignment="Left" Height="23" Margin="106,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222"/>
+        <Button x:Name="terugButton_Copy" Content="Terug" HorizontalAlignment="Left" Margin="452,443,0,0" VerticalAlignment="Top" Width="75" Click="terugButton_Click"/>
+        <Menu DockPanel.Dock="Top" Height="22" VerticalAlignment="Top">
+            <MenuItem Header="_Menu">
+                <MenuItem Header="_Hoofdmenu" Name="hoofdmenuItem" Click="terugButton_Click"/>
+                <MenuItem Header="_Voeg Toe" Name="voegtoeItem" Click="voegToeButton_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Name="exitItem" Click="ExitItem_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

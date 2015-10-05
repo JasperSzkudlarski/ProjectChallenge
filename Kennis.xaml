@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProjectChallenge.Kennis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kennis" Height="445" Width="717">
+    <Grid x:Name="kennisGrid">
+        <Grid.Background>
+            <ImageBrush ImageSource="aardrijkskunde.jpg"/>
+        </Grid.Background>
+        <Button x:Name="volgendeButton" Content="Volgende vraag" HorizontalAlignment="Left" Margin="490,365,0,0" Width="98" Height="28" VerticalAlignment="Top" Click="volgendeButton_Click"/>
+        <ProgressBar x:Name="statusProgressBar" HorizontalAlignment="Left" Height="28" Margin="21,365,0,0" VerticalAlignment="Top" Width="464" Maximum="30"/>
+        <Image x:Name="vraagImage" HorizontalAlignment="Left" Height="301" Margin="463,40,0,0" VerticalAlignment="Top" Width="202"/>
+        <Grid x:Name="antwoordGrid" HorizontalAlignment="Left" Height="274" Margin="21,86,0,0" VerticalAlignment="Top" Width="437">
+        </Grid>
+        <TextBlock x:Name="vraagTextblock" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="WrapWithOverflow" Text="Vraag:" VerticalAlignment="Top" Height="41" Width="391" FontSize="14" FontWeight="Bold"/>
+        <Menu DockPanel.Dock="Top" Height="22" VerticalAlignment="Top">
+            <MenuItem Header="_Menu">
+                <MenuItem Header="_Hoofdmenu" Name="hoofdmenuItem" Click="hoofdmenuItem_Click"/>
+                <MenuItem Header="_Volgende" Name="volgeldeItem" Click="volgendeButton_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Name="exitItem" Click="ExitItem_Click"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>

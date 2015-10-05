@@ -1,0 +1,26 @@
+﻿<Window x:Class="ProjectChallenge.NieuweUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nieuwe gebruiker toevoegen" Height="227.897" Width="373.391">
+    <Grid Margin="0,0,0,-4">
+        <Label Name="voornaamLabel" Content="Voornaam: " HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top"/>
+        <Label Name="achternaamLabel" Content="Achternaam: " HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
+        <Label Name="emailLabel" Content="E-mailadres: " HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,1.207"/>
+        <Label Name="paswoordLabel" Content="Paswoord: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,1.207"/>
+        <TextBox Name="voornaamTextBox" HorizontalAlignment="Left" Height="23" Margin="106,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <TextBox Name="achternaamTextBox" HorizontalAlignment="Left" Height="23" Margin="106,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <TextBox Name="emailTextBox" HorizontalAlignment="Left" Height="23" Margin="106,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203"/>
+        <PasswordBox Name="paswoordPasswordBox" HorizontalAlignment="Left" Margin="106,112,0,0" VerticalAlignment="Top" Width="203" Height="23"/>
+        <Button Name="voegToeButton" Content="Voeg gebruiker toe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Margin="203,153,0,0" Height="29" Click="voegToeButton_Click"/>
+        <Button x:Name="terugButton" Content="Terug" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Margin="35,153,0,0" Height="29" Click="terugButton_Click"/>
+        <Menu DockPanel.Dock="Top" Margin="0,-5,0,173">
+            <MenuItem Header="_Menu" Height="25" >
+                <MenuItem Header="_Voeg Gebruiker Toe" x:Name="voegToeMenuItem" Click="voegToeButton_Click"/>
+                <MenuItem Header="_Terug" x:Name="terugMenuItem" Click="terugButton_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" x:Name="exitItem" Click="exitItem_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
+
